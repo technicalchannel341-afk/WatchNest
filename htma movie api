@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WatchNest — Movies, Seasons & Web Series</title>
+  <meta name="description" content="WatchNest: Latest movies, trending seasons and web series reviews. Discover what to watch next—Hollywood, Bollywood, Turkish, Korean & Netflix Originals.">
+  <meta name="author" content="WatchNest">
+  <meta property="og:title" content="WatchNest — Movies & Web Series">
+  <meta property="og:description" content="Latest updates, honest reviews and recommendations for movies and web series.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> 
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#ff4d4f;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif}
+    body{margin:0;background:linear-gradient(180deg,#071022 0%,#0b1624 100%);color:#e6eef6;line-height:1.5}
+    header{padding:18px 20px;display:flex;align-items:center;justify-content:space-between;background:transparent}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:8px;background:var(--accent);display:grid;place-items:center;font-weight:700;color:#fff}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+    .container{max-width:980px;margin:22px auto;padding:0 16px}
+    .hero{background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:12px;margin-bottom:18px}
+    .hero h1{margin:0 0 8px;font-size:26px}
+    .hero p{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 4px 18px rgba(2,6,23,0.6)}
+    .post-title{margin:0 0 8px;font-size:18px}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+    .excerpt{color:#cfe3ff;margin-bottom:10px}
+    .readmore{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--glass);color:#dbeafe;text-decoration:none;font-size:14px}
+    footer{margin:30px 0 60px;text-align:center;color:var(--muted);font-size:14px}
+    .topbar{display:flex;gap:10px;align-items:center}
+    .search{padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    @media (max-width:520px){.hero h1{font-size:20px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">W</div>
+      <div>
+        <div style="font-weight:700">WatchNest</div>
+        <div style="font-size:12px;color:var(--muted)">Where Every Screen Has a Story</div>
+      </div>
+    </div>
+    <div class="topbar">
+      <input class="search" id="q" placeholder="Search titles, actors, reviews...">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h1>Latest Movies, Seasons & Web Series — Reviews & Recommendations</h1>
+      <p>WatchNest par paayen honest reviews, trending show guides, cast details aur upcoming releases — Hollywood, Bollywood, Turkish, Korean aur Netflix originals sab yahan.</p>
+    </section>
+
+    <section class="grid" id="posts">
+      <!-- Example Post 1 -->
+      <article class="card">
+        <h2 class="post-title">Review: "Midnight Chase" — Thriller That Keeps You Guessing</h2>
+        <div class="meta">Action • Thriller • Episode Guide • Aug 20, 2025</div>
+        <p class="excerpt">"Midnight Chase" fast-paced thriller hai jisme lead performance standout hai. Plot twists aur cinematography isay must-watch banate hain.</p>
+        <a class="readmore" href="#" data-content="post1">Read More</a>
+        <div id="post1" style="display:none;margin-top:12px;color:#d6e8ff">
+          <p><strong>Plot:</strong> A small-town cop uncovers a conspiracy... (sample full content goes here). <br><strong>Cast:</strong> A. Khan, L. Patel. <br><strong>Verdict:</strong> 4/5 — Strong performances & gripping plot.</p>
+        </div>
+      </article>
+
+      <!-- Example Post 2 -->
+      <article class="card">
+        <h2 class="post-title">Series Spotlight: "Seaside Hearts" — Romance with Depth</h2>
+        <div class="meta">Romance • Drama • Season 2 • Jul 10, 2025</div>
+        <p class="excerpt">Seaside Hearts season 2 character development par focus karta hai, aur pacing pehle se behtar hai.</p>
+        <a class="readmore" href="#" data-content="post2">Read More</a>
+        <div id="post2" style="display:none;margin-top:12px;color:#d6e8ff">
+          <p><strong>Plot:</strong> Returning characters face new challenges... <br><strong>Why watch:</strong> Emotional beats, great soundtrack.</p>
+        </div>
+      </article>
+
+      <!-- Example Post 3 -->
+      <article class="card">
+        <h2 class="post-title">Top 10 Turkish Dramas to Watch in 2025</h2>
+        <div class="meta">List • International • May 5, 2025</div>
+        <p class="excerpt">Hamari curated list me political dramas se le kar romantic sagas tak sab shamil hain. Perfect for binge-watching.</p>
+        <a class="readmore" href="#" data-content="post3">Read More</a>
+        <div id="post3" style="display:none;margin-top:12px;color:#d6e8ff">
+          <p>1. Drama A<br>2. Drama B<br>...<br>Top picks based on storytelling & popularity.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Movies API Section -->
+    <section id="movies" class="card" style="margin-top:16px">
+      <h3>🎬 Latest Movies from API</h3>
+      <div id="movieList">Loading movies...</div>
+    </section>
+
+    <section style="margin-top:18px" class="card">
+      <h3 style="margin:0 0 8px">Subscribe for Updates</h3>
+      <p style="margin:0 0 12px;color:var(--muted)">Get weekly recommendations and release alerts. (Demo sign-up)</p>
+      <form id="subscribe" onsubmit="return false">
+        <input id="email" placeholder="Enter your email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);width:60%">
+        <button onclick="subscribe()" style="padding:10px 12px;margin-left:8px;border-radius:8px;cursor:pointer">Subscribe</button>
+        <div id="submsg" style="margin-top:8px;color:var(--muted)"></div>
+      </form>
+    </section>
+
+    <section id="about" class="card" style="margin-top:16px">
+      <h3>About WatchNest</h3>
+      <p style="color:var(--muted)">WatchNest ek entertainment hub hai jo latest movies, seasons aur web series ke reviews, recommendations aur news provide karta hai. Hum aim karte hain ke aap hamesha updated rahen aur agla best show asani se choose kar saken.</p>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:16px">
+      <h3>Contact</h3>
+      <p style="color:var(--muted)">Email: contact@watchnest.example (replace with your real email)</p>
+    </section>
+
+    <section id="privacy" class="card" style="margin-top:16px">
+      <h3>Privacy</h3>
+      <p style="color:var(--muted)">This demo site is for informational purposes. Replace this page with your full Privacy Policy before applying for AdSense.</p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> WatchNest • All rights reserved
+    </footer>
+  </main>
+
+  <script>
+    // Read More toggle
+    document.querySelectorAll('.readmore').forEach(btn=>{
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        const id = this.dataset.content;
+        const el = document.getElementById(id);
+        if(!el) return;
+        el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+        this.textContent = el.style.display === 'block' ? 'Show Less' : 'Read More';
+      });
+    });
+
+    // Simple search (client-side)
+    document.getElementById('q').addEventListener('input', function(){
+      const q = this.value.toLowerCase();
+      document.querySelectorAll('#posts article').forEach(card=>{
+        const title = card.querySelector('.post-title').textContent.toLowerCase();
+        const excerpt = card.querySelector('.excerpt').textContent.toLowerCase();
+        card.style.display = (title.includes(q) || excerpt.includes(q)) ? 'block' : 'none';
+      });
+    });
+
+    // Subscribe demo
+    function subscribe(){
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('submsg');
+      if(!email || !email.includes('@')){ msg.textContent = 'Please enter a valid email.'; return; }
+      msg.textContent = 'Thank you! (Demo) — we would send updates to ' + email;
+    }
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Fetch Movies API
+    fetch("https://api.sampleapis.com/movies/action")
+      .then(response => response.json())
+      .then(data => {
+        let movieList = document.getElementById("movieList");
+        movieList.innerHTML = "";
+        data.slice(0, 10).forEach(movie => {
+          let card = document.createElement("div");
+          card.style.margin = "10px 0";
+          card.style.padding = "10px";
+          card.style.background = "#1a2235";
+          card.style.borderRadius = "8px";
+
+          card.innerHTML = `
+            <strong>${movie.title}</strong> (${movie.year || "N/A"})<br>
+            <span style="color:#9aa4b2">Genres: ${movie.genres ? movie.genres.join(", ") : "Unknown"}</span>
+          `;
+          movieList.appendChild(card);
+        });
+      })
+      .catch(error => {
+        document.getElementById("movieList").textContent = "Error loading movies.";
+        console.error("API Error:", error);
+      });
+  </script>
+</body>
+</html>
